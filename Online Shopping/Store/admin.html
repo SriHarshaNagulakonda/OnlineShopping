@@ -1,0 +1,127 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate(form1)
+{
+var image=window.document.form1.image.value;
+var k=0;
+if(image.length==0)
+{
+	document.getElementById('1').innerHTML="image should be filled";
+	k=1;
+}
+else
+document.getElementById('1').innerHTML="";
+var id=window.document.form1.id.value;
+if(id.length==0)
+{
+	document.getElementById('3').innerHTML="id should be filled";
+	k=1;
+}
+else
+document.getElementById('3').innerHTML="";
+var brand=window.document.form1.brand.value;
+if(brand.length==0)
+{
+	document.getElementById('4').innerHTML="brand should be filled";
+	k=1;
+}
+else
+document.getElementById('4').innerHTML="";
+var desc=window.document.form1.desc.value;
+if(desc.length==0)
+{
+	document.getElementById('5').innerHTML="description should be filled";
+	k=1;
+}
+else
+document.getElementById('5').innerHTML="";
+var ocost=window.document.form1.ocost.value;
+if(ocost.length==0)
+{
+	document.getElementById('6').innerHTML="OriginalCost should be filled";
+	k=1;
+}
+else
+document.getElementById('6').innerHTML="";
+var discount=window.document.form1.discount.value;
+if(discount.length==0)
+{
+	document.getElementById('7').innerHTML="discount should be filled";
+	k=1;
+}
+else
+document.getElementById('7').innerHTML="";
+var quantity=window.document.form1.quantity.value;
+if(quantity.length==0)
+{
+	document.getElementById('8').innerHTML="quantity should be filled";
+	k=1;
+}
+else
+document.getElementById('8').innerHTML="";
+if(k==0)
+return true;
+return false;
+}
+</script>
+</head>
+	<body>
+		<form name="form1" action="admin.php" method="post">
+			<table align="center">
+				<tr>
+					<td colspan="2" align="center"><font size="5" color="red">ADMIN</font></td>
+				</tr>
+
+				<tr>
+					<td> Enter image name:</td>
+					<td><input type="text" name="image"/></td>
+					<td><font color="blue" size="2"><span id="1"></span></font></td>
+				</tr>
+				<tr>
+					<td> Type:</td>
+					<td><select name="type">
+                    <option value="1">tshirt</option>
+                    <option value="2">shirt</option>
+                    <option value="3">Trousers</option>
+                    <option value="4">mobile</option>
+                    <option value="5">shoe</option></select></td>
+					
+				</tr>
+				<tr>
+					<td> Id:</td>
+					<td><input type="text" name="id"/></td>
+					<td><font color="blue" size="2"><span id="3"></span></font></td>
+				</tr>
+				<tr>
+					<td> Brand:</td>
+					<td><input type="text" name="brand"/></td>
+					<td><font color="blue" size="2"><span id="4"></span></font></td>
+				</tr>
+				<tr>
+					<td>Descriptioin:</td>
+					<td><textarea rows="4" cols="30" name="descc"></textarea></td>
+					<td><font color="blue" size="2"><span id="5"></span></font></td>
+				</tr>
+				<tr>
+					<td>OriginalCost:</td>
+					<td><input type="text" name="ocost"/></td>
+					<td><font color="blue" size="2"><span id="6"></span></font></td>
+				</tr>
+				<tr>
+					<td>Discount:</td>
+					<td><input type="textarea" name="discount"/></td>
+					<td><font color="blue" size="2"><span id="7"></span></font></td>
+				</tr>
+				<tr>
+					<td> Quantity:</td>
+					<td><input type="text" name="quantity"/></td>
+					<td><font color="blue" size="2"><span id="8"></span></font></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="submit" onclick="return validate(this)"/></td>
+			</table>
+		</form>
+	</body>
+</html>
+		     
